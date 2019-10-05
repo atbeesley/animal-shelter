@@ -62,7 +62,7 @@ customer3.save()
 customer4 = Customer.new({
   'name' => 'Han Solo',
   'age' => 32,
-  'profession' => 'smuggler'
+  'profession' => 'smuggler and scoundrel'
   })
 
 customer4.save()
