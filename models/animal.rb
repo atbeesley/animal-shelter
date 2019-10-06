@@ -52,6 +52,13 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
+def self.all()
+  "SELECT * FROM animals"
+  individual_animals = SqlRunner.run(sql)
+  result = individual_animals.map { |individual_animal| Animal.new(individual_animal)}
+  return result
+end 
+
 
 
 end
