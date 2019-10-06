@@ -8,7 +8,7 @@ Customer.delete_all()
 
 animal1 = Animal.new({
   'name' => 'Theresa',
-  'type' => 'tauntaun'
+  'type' => 'tauntaun',
   'admission_date' => '23/10/2017',
   'adoptable' => true
    })

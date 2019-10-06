@@ -1,8 +1,8 @@
-require_relative( '../db/sql_runner' )
+require_relative('../db/sql_runner')
 
 class Animal
 
-attr_reader(:name, :type, :admission_date, :adoptable, :id)
+attr_accessor(:name, :type, :admission_date, :adoptable, :id)
 
 def initialize( options )
   @name = options['name']
