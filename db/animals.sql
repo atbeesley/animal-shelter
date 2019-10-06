@@ -4,7 +4,9 @@ DROP TABLE customers;
 CREATE TABLE animals(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
-  species VARCHAR(255)
+  type VARCHAR(255),
+  admission_date VARCHAR(255),
+  adoptable BOOL
 );
 
 CREATE TABLE customers(
@@ -12,4 +14,4 @@ CREATE TABLE customers(
   name VARCHAR(255),
   age INT2,
   profession VARCHAR(255)
-)
+);
