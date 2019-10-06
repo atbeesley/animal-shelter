@@ -30,6 +30,21 @@ def save()
   @id = results.first()['id'].to_i
 end
 
+def update()
+  sql = "UPDATE animals
+  SET (
+    name,
+    type,
+    admission_date,
+    adoptable
+    ) = (
+      $1, $2, $3, $4
+    )
+    WHERE id = $5"
+    values = [@name, @type, @admission_date, @adoptable, @id]
+SqlRunner.run(sql, values)
+end
+
 
 
 end
