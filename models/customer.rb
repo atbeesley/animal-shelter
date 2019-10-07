@@ -30,9 +30,15 @@ def save()
   @id = id.to_i
 end
 
-
 def self.all()
   sql = "SELECT * FROM customers"
+  results = SqlRunner.run( sql )
+  return results.map { |customer| Customer.new( customer ) }
+end
+
+def self.find(id)
+  sql = "SELCT FROM customers
+  WHERE id = $1"
   values = [id]
   results = SqlRunner.run(sql, values)
   return Customer.new(results.first)
