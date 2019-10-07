@@ -1,0 +1,16 @@
+<h1>Animals</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th>Type</th>
+    <th>Adoptable</th>
+  </tr>
+  <% for customer in @customers %>
+  <tr>
+    <td><a href="/customers/<%= animal.id %>"><%= animal.name %><%= animal.type %><%= customer.admission_date %></a></td>
+    <td>|</td>
+  </tr>
+  <% end %>
+</table>
