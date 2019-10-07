@@ -1,4 +1,6 @@
 require_relative('../db/sql_runner')
+require_relative('animal')
+
 
 class Customer
 
@@ -9,7 +11,7 @@ def initialize(options)
     @name = options['name']
     @age = options['age']
     @profession = options['profession']
-    @customer_id = options['customer_id'].to_i
+    # @customer_id = options['customer_id'].to_i
 end
 
 def save()
@@ -17,7 +19,7 @@ def save()
   (
     name,
     age,
-    profession,
+    profession
   )
   VALUES
   (
@@ -51,12 +53,10 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
-def delete_all()
+def self.delete_all()
   sql = "DELETE FROM customers"
   SqlRunner.run(sql)
 end
-
-
 
 
 

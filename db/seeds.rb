@@ -1,5 +1,5 @@
-require_relative('models/animal.rb')
-require_relative('models/customer.rb')
+require_relative('../models/animal')
+require_relative('../models/customer')
 
 require('pry-byebug')
 
@@ -46,7 +46,7 @@ animal4.save()
 customer1 = Customer.new({
   'name' => 'Obi-Wan Kenobi',
   'age' => 65,
-  'profession' => 'Jedi knight',
+  'profession' => 'Jedi knight'
   })
 
 customer2 = Customer.new({

@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('customer')
 
 class Animal
 
@@ -18,7 +19,7 @@ def save()
     name,
     type,
     admission_date,
-    adoptable,
+    adoptable
   )
   VALUES
   (
@@ -53,7 +54,7 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
-def delete_all()
+def self.delete_all()
   sql = "DELETE FROM animals"
   SqlRunner.run(sql)
 end
