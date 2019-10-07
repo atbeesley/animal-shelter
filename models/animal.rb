@@ -24,10 +24,11 @@ def save()
   (
     $1, $2, $3, $4
   )
-  RETURNING id"
+  RETURNING *"
   values = [@name, @type, @admission_date, @adoptable]
-  results = SqlRunner.run(sql, values)
-  @id = results.first()['id'].to_i
+  result = SqlRunner.run(sql, values)
+    id = result.first["id"]
+    @id = id.to_i
 end
 
 def update()

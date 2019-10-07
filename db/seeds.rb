@@ -10,28 +10,32 @@ animal1 = Animal.new({
   'name' => 'Theresa',
   'type' => 'tauntaun',
   'admission_date' => '23/10/2017',
-  'adoptable' => true
+  'adoptable' => true,
+  'owner_id' => nil
    })
 
 animal2 = Animal.new({
   'name' => 'Betty',
   'type' => 'bantha',
   'admission_date' => '04/07/2018',
-  'adoptable' => true
+  'adoptable' => true,
+  'owner_id' => nil
   })
 
 animal3 = Animal.new({
     'name' => 'Percy',
     'type' => 'porg',
     'admission_date' => '06/06/2019',
-    'adoptable' => false
+    'adoptable' => false,
+    'owner_id' => nil
     })
 
 animal4 = Animal.new({
   'name' => 'Ryan',
   'type' => 'Rancor',
   'admission_date' => '10/09/2019',
-  'adoptable' => false
+  'adoptable' => false,
+  'owner_id' => nil
   })
 
 animal1.save()

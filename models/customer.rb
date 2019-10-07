@@ -2,14 +2,42 @@ require_relative('../db/sql_runner')
 
 class Customer
 
-  attr_accessor :name, :age, :profession, :id
+attr_accessor :name, :age, :profession, :id
 
-  def initialize(options)
+def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
     @age = options['age']
     @profession = options['profession']
+    @owner_id =
+end
+
+def save()
+  sql = "INSERT INTO customers
+  (
+    name,
+    age,
+    profession,
+  )
+  VALUES
+  (
+    $1, $2, $3
+  )
+  RETURNING *"
+  values = [@name , @age, @profession]
+  result = SqlRunner.run(sql, values)
+  id = result.first["id"]
+  @id = id.to_i
 end
 
 
-end 
+def self.all()
+  sql = "SELECT * FROM customers"
+  values = [id]
+  results = SqlRunner.run(sql, values)
+  return Customer.new(results.first)
+end
+
+
+
+end
