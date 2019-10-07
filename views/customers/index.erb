@@ -1,16 +1,20 @@
 <h1>Customers</h1>
 
+<p>This page shows the customers of the animal shelter.</p>
+
 <table>
   <tr>
     <th>Name</th>
-    <th></th>
+    <th>Customer ID</th>
     <th>Age</th>
-    <th>Profession
+    <th>Profession</th>
   </tr>
   <% for customer in @customers %>
   <tr>
-    <td><a href="/customers/<%= customer.id %>"><%= customer.name %><%= customer.age %><%= customer.profession %></a></td>
-    <td>|</td>
+    <th><%= customer.name %></th>
+    <th><%= customer.id %></th>
+    <th><%= customer.age %></th>
+    <th><%= customer.profession %></th>
   </tr>
   <% end %>
 </table>

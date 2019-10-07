@@ -8,8 +8,8 @@ attr_accessor(:name, :type, :admission_date, :adoptable, :id)
 def initialize( options )
   @name = options['name']
   @type = options['type']
-  @admission_date = options['id']
-  @adoptable = options['id']
+  @admission_date = options['admission_date']
+  @adoptable = options['adoptable']
   @id = options['id'].to_i if options['id']
 end
 
