@@ -53,6 +53,11 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
+def delete_all()
+  sql = "DELETE FROM animals"
+  SqlRunner.run(sql)
+end
+
 def self.all()
   "SELECT * FROM animals"
   individual_animals = SqlRunner.run(sql)

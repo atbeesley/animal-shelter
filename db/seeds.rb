@@ -71,3 +71,6 @@ customer1.save()
 customer2.save()
 customer3.save()
 customer4.save()
+
+binding.pry
+nil

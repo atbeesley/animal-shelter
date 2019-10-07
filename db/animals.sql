@@ -6,7 +6,8 @@ CREATE TABLE animals(
   name VARCHAR(255),
   type VARCHAR(255),
   admission_date VARCHAR(255),
-  adoptable BOOL
+  adoptable BOOL,
+  owner_id INT8
 );
 
 CREATE TABLE customers(

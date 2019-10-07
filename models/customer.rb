@@ -2,14 +2,14 @@ require_relative('../db/sql_runner')
 
 class Customer
 
-attr_accessor :name, :age, :profession, :id
+attr_accessor :name, :age, :profession, :id, :customer_id
 
 def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
     @age = options['age']
     @profession = options['profession']
-    @owner_id =
+    @customer_id = options['customer_id'].to_i
 end
 
 def save()
