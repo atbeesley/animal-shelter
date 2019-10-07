@@ -44,6 +44,11 @@ def self.find(id)
   return Customer.new(results.first)
 end
 
+def delete_all()
+  sql = "DELETE FROM customers"
+  SqlRunner.run(sql)
+end
+
 
 
 end
