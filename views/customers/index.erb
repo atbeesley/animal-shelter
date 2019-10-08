@@ -15,7 +15,9 @@
     <td><%= customer.id %></td>
     <td><%= customer.age %></td>
     <td><%= customer.profession %></td>
-    <td><button type="button" name="button"><a href="/customers/<% customer.id %>/delete">Delete</a></button></td>
+    <td><form action="/customers/<%= customer.id %>/delete" method="post">
+      <input type="submit" value="Delete">
+    </form></td>
   </tr>
 
   <% end %>

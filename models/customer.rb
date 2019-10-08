@@ -38,7 +38,7 @@ def self.all()
 end
 
 def self.find(id)
-  sql = "SELCT FROM customers
+  sql = "SELECT * FROM customers
   WHERE id = $1"
   values = [id]
   results = SqlRunner.run(sql, values)
