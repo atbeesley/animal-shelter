@@ -9,7 +9,7 @@ get '/animals' do
 end
 
 get '/animals/new' do
-  @customers = Customer.all
+  @animals = Animal.all
   erb(:'animals/new')
 end
 
@@ -20,13 +20,13 @@ end
 
 get '/animals/:id' do
   @animals = Animal.find(params['id'])
-  erb(:show)
+  erb(:'animals/show')
 end
 
 get '/animals/:id/edit' do
   @customers = Customer.all
   @animal = Animal.find(params['id'])
-  erb(:edit)
+  erb(:'animals/edit')
 end
 
 post '/animals/:id' do

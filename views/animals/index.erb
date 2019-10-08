@@ -17,11 +17,12 @@
     <td><%= animal.admission_date %></td>
     <td><%= animal.adoptable %></td>
     <td><%= animal.customer_id %></td>
-    <td><button type="button" name="button"><a href="/animals/<% animal.id %>/delete">Delete</a></button></td>
+    <td><form action="/customers/<%= customer.id %>/delete" method="post">
+      <input type="submit" value="Delete"></td>
   </tr>
   <% end %>
 </table>
 
-<br>
+<hr>
 
 <button type="button" name="button"><a href="/animals/new">Add a new pet to the shelter</a>

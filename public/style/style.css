@@ -1,0 +1,21 @@
+body{
+  background-color: #0A0B06;
+  background-image: url("../images/porg.gif");
+  background-repeat: no-repeat;
+  background-position: right;
+   width: 400px;
+   height: 400px;
+}
+
+a:hover {
+  color: yellow;
+}
+
+p, h1 {
+  color: white;
+}
+
+table {
+  border: 1px black;
+  color: white;
+}
