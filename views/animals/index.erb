@@ -1,16 +1,22 @@
 <h1>Animals</h1>
 
+<p>This page shows the animals of the animal shelter, along with what type of animal each one is, the date they were admitted to the shelter, if they are ready to be adopted or not, and, if they have one, the ID of their owner.</p>
+
 <table>
   <tr>
     <th>Name</th>
-    <th></th>
     <th>Type</th>
-    <th>Adoptable</th>
+    <th>Admission Date</th>
+    <th>Ready for adoption?</th>
+    <th>Owner's ID</th>
   </tr>
-  <% for customer in @customers %>
+  <% for animal in @animals %>
   <tr>
-    <td><a href="/customers/<%= animal.id %>"><%= animal.name %><%= animal.type %><%= customer.admission_date %></a></td>
-    <td>|</td>
+    <th><%= animal.name %></th>
+    <th><%= animal.type %></th>
+    <th><%= animal.admission_date %></th>
+    <th><%= animal.adoptable %></th>
+    <th><%= animal.customer_id %></th>
   </tr>
   <% end %>
 </table>

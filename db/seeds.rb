@@ -11,7 +11,7 @@ animal1 = Animal.new({
   'type' => 'tauntaun',
   'admission_date' => '23/10/2017',
   'adoptable' => true,
-  'owner_id' => nil
+  'customer_id' => nil
    })
 
 animal2 = Animal.new({
@@ -19,7 +19,7 @@ animal2 = Animal.new({
   'type' => 'bantha',
   'admission_date' => '04/07/2018',
   'adoptable' => true,
-  'owner_id' => nil
+  'customer_id' => nil
   })
 
 animal3 = Animal.new({
@@ -35,7 +35,7 @@ animal4 = Animal.new({
   'type' => 'Rancor',
   'admission_date' => '10/09/2019',
   'adoptable' => false,
-  'owner_id' => nil
+  'customer_id' => nil
   })
 
 animal1.save()

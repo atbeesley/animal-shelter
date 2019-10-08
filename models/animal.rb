@@ -61,8 +61,8 @@ end
 
 def self.all()
   "SELECT * FROM animals"
-  individual_animals = SqlRunner.run(sql)
-  result = individual_animals.map { |individual_animal| Animal.new(individual_animal)}
+  animal = SqlRunner.run(sql)
+  result = animal.map { |animal| Animal.new(animal)}
   return result
 end
 
@@ -70,7 +70,7 @@ def self.find(id)
   sql = "SELECT * FROM animals
   WHERE id = $1"
   values = [id]
-  individual_animal = SqlRunner.run(sql, values)
+  animal = SqlRunner.run(sql, values)
   result = Animal.new
 end
 
