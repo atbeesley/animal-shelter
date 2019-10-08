@@ -11,10 +11,12 @@
   </tr>
   <% for customer in @customers %>
   <tr>
-    <th><%= customer.name %></th>
-    <th><%= customer.id %></th>
-    <th><%= customer.age %></th>
-    <th><%= customer.profession %></th>
+    <td><%= customer.name %></td>
+    <td><%= customer.id %></td>
+    <td><%= customer.age %></td>
+    <td><%= customer.profession %></td>
+    <td><button type="button" name="button"><a href="/customers/<% customer.id %>/delete">Delete</a></button></td>
+
   </tr>
 
   <% end %>

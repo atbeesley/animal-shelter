@@ -12,11 +12,12 @@
   </tr>
   <% for animal in @animals %>
   <tr>
-    <th><%= animal.name %></th>
-    <th><%= animal.type %></th>
-    <th><%= animal.admission_date %></th>
-    <th><%= animal.adoptable %></th>
-    <th><%= animal.customer_id %></th>
+    <td><%= animal.name %></td>
+    <td><%= animal.type %></td>
+    <td><%= animal.admission_date %></td>
+    <td><%= animal.adoptable %></td>
+    <td><%= animal.customer_id %></td>
+    <td><button type="button" name="button"><a href="/animals/<% animal.id %>/delete">Delete</a></button></td>
   </tr>
   <% end %>
 </table>

@@ -6,12 +6,12 @@ also_reload('../models/*')
 
 get '/customers' do
   @customers = Customer.all
-  erb(:index)
+  erb(:'customers/index')
 end
 
 get '/customers/new' do
   @customers = Customer.all
-  erb(:new)
+  erb(:'customers/new')
 end
 
 post '/customers' do
@@ -21,13 +21,13 @@ end
 
 get '/customers/:id' do
   @customer = Customer.find(params['id'])
-  erb(:show)
+  erb(:'customers/show')
 end
 
 get '/customers/:id/edit' do
   @animals = Animal.all
   @customer = Customer.find(params['id'])
-  erb(:edit)
+  erb(:'customers/edit')
 end
 
 post '/customers/:id' do
