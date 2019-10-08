@@ -15,7 +15,7 @@
     <td><%= customer.id %></td>
     <td><%= customer.age %></td>
     <td><%= customer.profession %></td>
-    <td><form action="/customers/<%= customer.id %>/edit" method="post">
+    <td><form action="/customers/<%= customer.id %>/edit" method="get">
       <input type="submit" value="Edit details"></td>
     <td><form action="/customers/<%= customer.id %>/delete" method="post">
       <input type="submit" value="Delete">
