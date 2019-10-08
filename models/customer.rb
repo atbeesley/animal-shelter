@@ -11,7 +11,6 @@ def initialize(options)
     @name = options['name']
     @age = options['age']
     @profession = options['profession']
-    @customer_id = options['customer_id'].to_i
 end
 
 def save()

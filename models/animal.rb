@@ -3,7 +3,7 @@ require_relative('customer')
 
 class Animal
 
-attr_accessor(:name, :type, :admission_date, :adoptable, :id)
+attr_accessor(:name, :type, :admission_date, :adoptable, :customer_id, :id)
 
 def initialize( options )
   @name = options['name']
@@ -11,6 +11,7 @@ def initialize( options )
   @admission_date = options['admission_date']
   @adoptable = options['adoptable']
   @id = options['id'].to_i if options['id']
+  @customer_id = options['customer_id'].to_i if options['customer_id']
 end
 
 def save()
@@ -20,13 +21,14 @@ def save()
     type,
     admission_date,
     adoptable
+    customer_id,
   )
   VALUES
   (
-    $1, $2, $3, $4
+    $1, $2, $3, $4, $5
   )
   RETURNING *"
-  values = [@name, @type, @admission_date, @adoptable]
+  values = [@name, @type, @admission_date, @adoptable, @customer_id]
   result = SqlRunner.run(sql, values)
     id = result.first["id"]
     @id = id.to_i
@@ -38,12 +40,13 @@ def update()
     name,
     type,
     admission_date,
-    adoptable
+    adoptable,
+    customer_id
     ) = (
-      $1, $2, $3, $4
+      $1, $2, $3, $4, $5
     )
-    WHERE id = $5"
-    values = [@name, @type, @admission_date, @adoptable, @id]
+    WHERE id = $6"
+    values = [@name, @type, @admission_date, @adoptable, @id, @customer_id]
 SqlRunner.run(sql, values)
 end
 
@@ -60,9 +63,9 @@ def self.delete_all()
 end
 
 def self.all()
-  "SELECT * FROM animals"
-  animal = SqlRunner.run(sql)
-  result = animal.map { |animal| Animal.new(animal)}
+  sql = "SELECT * FROM animals"
+  animals = SqlRunner.run(sql)
+  result = animals.map { |animal| Animal.new(animal)}
   return result
 end
 

@@ -6,12 +6,12 @@ also_reload('../models/*')
 
 get '/animals' do
   @animals = Animal.all
-  erb(:index)
+  erb(:'animals/index')
 end
 
 get '/animals/new' do
   @customers = Customer.all
-  erb(:new)
+  erb(:'animals/new')
 end
 
 post '/animals' do

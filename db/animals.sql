@@ -14,5 +14,5 @@ CREATE TABLE animals(
   type VARCHAR(255),
   admission_date VARCHAR(255),
   adoptable BOOLEAN,
-  customer_id INT8 REFERENCES customer(id)
+  customer_id INT8 REFERENCES customers(id) ON DELETE CASCADE
 );
