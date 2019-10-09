@@ -53,11 +53,18 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
+def animal
+  sql = "SELECT * FROM animals
+  WHERE customer_id = $1"
+  values = [@id]
+  results = SqlRunner.run(sql, values)
+  return results.map {|animal| Animal.new(animal)}
+end
+
 def self.delete_all()
   sql = "DELETE FROM customers"
   SqlRunner.run(sql)
 end
-
 
 
 end

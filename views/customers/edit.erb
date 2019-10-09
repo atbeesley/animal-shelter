@@ -1,29 +1,25 @@
 <h1>Edit customer details</h1>
-<form method="POST" action="/animals">
+<form method="POST" action="/customers">
   <div class="form-wrapper">
 
     <div class="form-el">
-      <label for="name"  style="color:white;">Name:</label>
+      <label for="name"  style="color:white;" value="<%= customer.name %>">Customer name:</label>
       <input type="text" name="name" id="name"/>
     </div>
 
     <div class="form-el">
-      <label for="age" style="color:white;">Type:</label>
+      <label for="age" style="color:white;" value="<%= customer.age %>">Age:</label>
       <input type="number" name="age" id="age"/>
     </div>
 
     <div class="form-el">
-      <label for="admission_date" style="color:white;">Admission Date:</label>
+      <label for="admission_date" style="color:white;" value="<%= customer.profession %>">Profession:</label>
       <input type="text" name="admission_date" id="admission_date"/>
     </div>
 
-    <div class="form-el">
-      <label for="adoptable" style="color:white;">Ready for adoption?</label>
-      <input type="text" name="adoptable" id="adoptable"/>
-    </div>
 
     <div class="form-el">
-      <input type="submit" value="Enter changes"/>
+      <input type="submit" value="Save changes"/>
     </div>
 
   </div>

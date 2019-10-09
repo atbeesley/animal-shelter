@@ -44,4 +44,5 @@ end
 
 
 post '/customers/:id/adopt' do
-end 
+  redirect to '/customers'
+end
