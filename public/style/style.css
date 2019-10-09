@@ -11,7 +11,7 @@ a:hover {
   color: yellow;
 }
 
-p, h1, table {
+p, h1, table, div.class {
   color: white;
   font-family: Arial, monospace;
 }
