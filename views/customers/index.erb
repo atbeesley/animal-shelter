@@ -5,14 +5,12 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Customer ID</th>
     <th>Age</th>
     <th>Profession</th>
   </tr>
   <% for customer in @customers %>
   <tr>
     <td><a href="/customers/<%= customer.id %>"><%= customer.name %></a></td>
-    <td><%= customer.id %></td>
     <td><%= customer.age %></td>
     <td><%= customer.profession %></td>
     <td><form action="/customers/<%= customer.id %>/edit" method="get">
@@ -25,5 +23,7 @@
 
   <% end %>
 </table>
+<br>
+<br>
 
 <button type="button" name="button"><a href="/customers/new">Add a new customer to the alliance</a>
