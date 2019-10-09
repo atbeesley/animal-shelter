@@ -3,3 +3,15 @@
 <p><%= @customer.age %></p>
 <p><%= @customer.profession %></p>
 <p><%= @customer.id %></p>
+
+<form action="/customers/<%= @customer.id %>/adopt" method="post" >
+
+  <select>
+    <% for animal in @animals %>
+  <option value="<% animal.id %>"><%= animal.name %></option>
+  <% end %>
+</select>
+
+<button type="submit" name="Adopt"></button>
+
+</form>

@@ -20,6 +20,7 @@ end
 
 get '/customers/:id' do
   @customer = Customer.find(params['id'])
+  @animals = Animal.all
   erb(:'customers/show')
 end
 
@@ -40,3 +41,7 @@ post '/customers/:id/delete' do
   customer.delete
   redirect to '/customers'
 end
+
+
+post '/customers/:id/adopt' do
+end 
