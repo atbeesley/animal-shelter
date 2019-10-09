@@ -41,8 +41,9 @@ def self.find(id)
   sql = "SELECT * FROM customers
   WHERE id = $1"
   values = [id]
-  results = SqlRunner.run(sql, values)
-  return Customer.new(results.first)
+  customer = SqlRunner.run(sql, values).first
+  result = Customer.new(customer)
+  return result
 end
 
 def delete()

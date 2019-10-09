@@ -17,8 +17,7 @@
     <td><%= animal.admission_date %></td>
     <td><%= animal.adoptable %></td>
     <td><%= animal.customer_id %></td>
-    <td><form action="/animals/<%= animal.id %>/edit" method="post">
-      <input type="submit" value="Edit details"></td>
+    <td><a href="/animals/<%=  animal.id %>/edit">Edit animal info</a></td>
     <td><form action="/animals/<%= animal.id %>/delete" method="post">
       <input type="submit" value="Delete"></td>
   </tr>
