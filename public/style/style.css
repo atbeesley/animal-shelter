@@ -11,9 +11,14 @@ a:hover {
   color: yellow;
 }
 
-p, h1, table, div.class {
+p, table, div.class {
   color: white;
   font-family: Arial, monospace;
+}
+
+h1{
+  color: white;
+  font-family: "Lucida Console", Monaco, monospace
 }
 
 table {
@@ -21,7 +26,6 @@ table {
   color: white;
   width: 100%;
 }
-
 
 th {
   height: 50px;

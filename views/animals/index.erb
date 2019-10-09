@@ -16,10 +16,13 @@
     <td><%= animal.type %></td>
     <td><%= animal.admission_date %></td>
     <td><%= animal.adoptable %></td>
-    <td><%= animal.customer_id %></td>
+    <td>
+        <% if animal.customer_id %>
+      <%= animal.customer.name %>
+      <% end %></td>
     <td><a href="/animals/<%=  animal.id %>/edit">Edit animal info</a></td>
     <td><form action="/animals/<%= animal.id %>/delete" method="post">
-      <input type="submit" value="Delete"></td>
+      <input type="submit" value="Delete"></input></td>
   </tr>
   <% end %>
 </table>

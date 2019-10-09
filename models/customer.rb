@@ -53,7 +53,7 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
-def animal
+def animals
   sql = "SELECT * FROM animals
   WHERE customer_id = $1"
   values = [@id]
