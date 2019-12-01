@@ -1,7 +1,6 @@
 require_relative('../models/animal')
 require_relative('../models/customer')
 
-require('pry-byebug')
 
 Animal.delete_all()
 Customer.delete_all()
